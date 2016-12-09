@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:background="#ffff00"
+    android:orientation="horizontal">
+
+    <ScrollView
+        android:background="@drawable/question"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="false"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/my_toolbar"
+        >
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="false">
+        <TextView
+            android:text="@string/Header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView3"
+            style = "@style/Header"/>
+
+        <TextView
+            android:text="@string/Description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView4"
+            style = "@style/Description"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            android:hint="@string/I1"
+            android:ems="10"
+            android:id="@+id/Question"
+            style ="@style/Input"
+            android:layout_marginTop="30dp"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            android:hint="@string/I2"
+            android:ems="10"
+            android:id="@+id/Option1"
+            style ="@style/Input"
+            android:layout_marginTop="15dp"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            android:hint="@string/I3"
+            android:ems="10"
+            android:id="@+id/Option2"
+            style ="@style/Input"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            android:hint="@string/I4"
+            android:ems="10"
+            android:id="@+id/Option3"
+            style ="@style/Input"
+            android:visibility="gone"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            android:hint="@string/I5"
+            android:ems="10"
+            android:id="@+id/Option4"
+            android:visibility="gone"
+            style ="@style/Input"
+            />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center">
+
+            <Button
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:text="@string/more"
+                android:id="@+id/addMore"
+                android:layout_gravity="right"
+                android:textColor="@color/textColor"
+                android:onClick="addOption"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"/>
+
+            <Button
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:text="@string/less"
+                android:id="@+id/addLess"
+                android:layout_gravity="left"
+                android:textColor="@color/textColor"
+                android:onClick="RemoveOption"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                />
+        </LinearLayout>
+        <!--TODO: Enable Scrolling-->
+        <!--<Button-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="@string/ask"-->
+            <!--android:id="@+id/ask"-->
+            <!--android:layout_gravity="center"-->
+            <!--android:layout_marginTop="60dp"-->
+            <!--android:textColor="@color/textColor"-->
+            <!--/>-->
+        </LinearLayout>
+    </ScrollView>
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        android:elevation="10dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Dark"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+    </android.support.v7.widget.Toolbar>
+
+</RelativeLayout>
